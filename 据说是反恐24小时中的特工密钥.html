@@ -1,0 +1,64 @@
+据说是反恐24小时中的特工密钥
+
+aWdxNDs0NDFSOzFpa1I1MWliT09w
+
+对特工mac电脑的windows虚拟机分析后
+
+听说采用了异或的加密方式。
+
+硬盘上部分程序代码为：chr(ord(str[i]) ^ j)
+
+
+
+
+
+
+一、 XOR 运算
+逻辑运算之中，除了 AND 和 OR，还有一种 XOR 运算，中文称为"异或运算"。
+
+
+它的定义是：两个值相同时，返回false，否则返回true。也就是说，XOR可以用来判断两个值是否不同。
+
+
+true XOR true // false
+false XOR false // false
+true XOR false // true
+true XOR false // true
+
+
+
+
+JavaScript 语言的二进制运算，有一个专门的 XOR 运算符，写作^。
+
+
+1 ^ 1 // 0
+0 ^ 0 // 0
+1 ^ 0 // 1
+0 ^ 1 // 1
+上面代码中，如果两个二进制位相同，就返回0，表示false；否则返回1，表示true。
+
+
+二、 XOR 的应用
+XOR 运算有一个很奇妙的特点：如果对一个值连续做两次 XOR，会返回这个值本身。
+
+
+// 第一次 XOR
+1010 ^ 1111 // 0101
+// 第二次 XOR
+0101 ^ 1111 // 1010
+上面代码中，原始值是1010，再任意选择一个值（上例是1111），做两次 XOR，最后总是会得到原始值1010。这在数学上是很容易证明的。
+
+
+三、加密应用
+XOR 的这个特点，使得它可以用于信息的加密。
+
+
+message XOR key // cipherText
+cipherText XOR key // message
+上面代码中，原始信息是message，密钥是key，第一次 XOR 会得到加密文本cipherText。对方拿到以后，再用key做一次 XOR 运算，就会还原得到message。
+
+
+四、完美保密性
+二战期间，各国为了电报加密，对密码学进行了大量的研究和实践，其中就包括 XOR 加密。
+
+
